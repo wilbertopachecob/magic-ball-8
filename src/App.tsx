@@ -102,8 +102,8 @@ export default function App() {
       </main>
 
       <footer className="colophon">
-        <span>{t('app.colophonAnswers')}</span>
-        <span>{t('app.colophonShake')}</span>
+        <span className="colophon__start">{t('app.colophonAnswers')}</span>
+        <span className="colophon__end">{t('app.colophonShake')}</span>
       </footer>
     </div>
   );
