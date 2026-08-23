@@ -29,3 +29,44 @@ export function getRandomMagic8BallResponseKey(): Magic8BallResponseKey {
     Math.floor(Math.random() * MAGIC_8_BALL_RESPONSE_KEYS.length)
   ];
 }
+
+/** The three verdict groups stamped on the die, in canonical order. */
+export const MAGIC_8_BALL_VERDICTS = ['YES', 'MAYBE', 'NO'] as const;
+
+export type Magic8BallVerdict = (typeof MAGIC_8_BALL_VERDICTS)[number];
+
+/**
+ * The classic split: 10 affirmative, 5 non-committal, 5 negative.
+ * The die shows this; the slip shows the full response.
+ */
+const VERDICT_BY_RESPONSE_KEY: Record<
+  Magic8BallResponseKey,
+  Magic8BallVerdict
+> = {
+  IT_IS_CERTAIN: 'YES',
+  IT_IS_DECIDEDLY_SO: 'YES',
+  WITHOUT_A_DOUBT: 'YES',
+  YES_DEFINITELY: 'YES',
+  YOU_MAY_RELY_ON_IT: 'YES',
+  AS_I_SEE_IT_YES: 'YES',
+  MOST_LIKELY: 'YES',
+  OUTLOOK_GOOD: 'YES',
+  YES: 'YES',
+  SIGNS_POINT_TO_YES: 'YES',
+  REPLY_HAZY_TRY_AGAIN: 'MAYBE',
+  ASK_AGAIN_LATER: 'MAYBE',
+  BETTER_NOT_TELL_YOU_NOW: 'MAYBE',
+  CANNOT_PREDICT_NOW: 'MAYBE',
+  CONCENTRATE_AND_ASK_AGAIN: 'MAYBE',
+  DONT_COUNT_ON_IT: 'NO',
+  MY_REPLY_IS_NO: 'NO',
+  MY_SOURCES_SAY_NO: 'NO',
+  OUTLOOK_NOT_SO_GOOD: 'NO',
+  VERY_DOUBTFUL: 'NO',
+};
+
+export function getVerdictForResponseKey(
+  responseKey: Magic8BallResponseKey,
+): Magic8BallVerdict {
+  return VERDICT_BY_RESPONSE_KEY[responseKey];
+}
