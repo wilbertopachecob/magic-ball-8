@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Magic 8 Ball">
+  <defs>
+    <radialGradient id="ball" cx="34%" cy="27%" r="78%">
+      <stop offset="0%" stop-color="#33456d" />
+      <stop offset="55%" stop-color="#101827" />
+      <stop offset="100%" stop-color="#060a12" />
+    </radialGradient>
+  </defs>
+  <circle cx="16" cy="16" r="16" fill="url(#ball)" />
+  <circle
+    cx="16"
+    cy="16"
+    r="13.6"
+    fill="none"
+    stroke="#f7f1e4"
+    stroke-opacity="0.1"
+    stroke-width="0.7"
+  />
+  <!-- Georgia "8", scaled to the ball. Path so webfonts are not required. -->
+  <g transform="translate(16 16.4) scale(0.01246 -0.01246) translate(-610.5 -711)">
+    <path
+      fill="#f7f1e4"
+      d="M1117 376Q1117 208 972 87Q827-34 591-34Q370-34 237 77Q104 188 104 363Q104 492 182.5 578.5Q261 665 415 725Q288 796 225 881Q162 966 162 1073Q162 1236 300.5 1346Q439 1456 632 1456Q825 1456 944.5 1352Q1064 1248 1064 1091Q1064 990 998 899.5Q932 809 804 751Q970 680 1043.5 594Q1117 508 1117 376ZM875 1102Q875 1224 802.5 1300.5Q730 1377 617 1377Q504 1377 432 1303.5Q360 1230 360 1121Q360 1016 442 943Q524 870 734 787Q809 835 842 914Q875 993 875 1102ZM917 329Q917 392 890 439.5Q863 487 812 526Q763 564 675.5 605.5Q588 647 486 690Q390 638 345 557.5Q300 477 300 374Q300 227 386.5 136.5Q473 46 617 46Q755 46 836 126Q917 206 917 329Z"
+    />
+  </g>
+</svg>
