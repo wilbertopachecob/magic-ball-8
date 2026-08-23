@@ -1,0 +1,54 @@
+{
+  "app": {
+    "title": "Magic 8 Ball",
+    "headline": "Ask, and it answers",
+    "subtitleDesktop": "Hold your question in mind, then turn the ball.",
+    "subtitleMobile": "Hold your question in mind, then shake your phone.",
+    "askButton": "Ask the ball",
+    "askAgainButton": "Ask again",
+    "askingButton": "Asking…",
+    "tapToAskButton": "Or tap to ask",
+    "shakePrompt": "Give it a shake",
+    "slipLabel": "The ball says",
+    "keyboardHint": "Press <key>Space</key> to ask the ball.",
+    "revealingHint": "The ink is settling…",
+    "ballAriaLabel": "Magic 8 Ball",
+    "ballDisplay": "8",
+    "colophonAnswers": "Twenty answers, one ball",
+    "colophonShake": "On a phone, a shake works too"
+  },
+  "verdicts": {
+    "YES": "Yes",
+    "MAYBE": "Maybe",
+    "NO": "No"
+  },
+  "language": {
+    "label": "Language",
+    "en": "English",
+    "es": "Español",
+    "enShort": "EN",
+    "esShort": "ES"
+  },
+  "responses": {
+    "IT_IS_CERTAIN": "It is certain.",
+    "IT_IS_DECIDEDLY_SO": "It is decidedly so.",
+    "WITHOUT_A_DOUBT": "Without a doubt.",
+    "YES_DEFINITELY": "Yes definitely.",
+    "YOU_MAY_RELY_ON_IT": "You may rely on it.",
+    "AS_I_SEE_IT_YES": "As I see it, yes.",
+    "MOST_LIKELY": "Most likely.",
+    "OUTLOOK_GOOD": "Outlook good.",
+    "YES": "Yes.",
+    "SIGNS_POINT_TO_YES": "Signs point to yes.",
+    "REPLY_HAZY_TRY_AGAIN": "Reply hazy, try again.",
+    "ASK_AGAIN_LATER": "Ask again later.",
+    "BETTER_NOT_TELL_YOU_NOW": "Better not tell you now.",
+    "CANNOT_PREDICT_NOW": "Cannot predict now.",
+    "CONCENTRATE_AND_ASK_AGAIN": "Concentrate and ask again.",
+    "DONT_COUNT_ON_IT": "Don't count on it.",
+    "MY_REPLY_IS_NO": "My reply is no.",
+    "MY_SOURCES_SAY_NO": "My sources say no.",
+    "OUTLOOK_NOT_SO_GOOD": "Outlook not so good.",
+    "VERY_DOUBTFUL": "Very doubtful."
+  }
+}

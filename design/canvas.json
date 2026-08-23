@@ -1,0 +1,123 @@
+{
+  "pages": [
+    {
+      "id": "page-2",
+      "name": "Option A — build"
+    },
+    {
+      "id": "page-1",
+      "name": "All four directions"
+    }
+  ],
+  "artboards": [
+    {
+      "file": "PaperOracle.dc.html",
+      "title": "Option A — Paper Oracle",
+      "page": "page-2",
+      "x": 0,
+      "y": 0,
+      "w": 760,
+      "h": 1000
+    },
+    {
+      "file": "PaperStates.dc.html",
+      "title": "States",
+      "page": "page-2",
+      "x": 880,
+      "y": 0,
+      "w": 1180,
+      "h": 760
+    },
+    {
+      "file": "PaperMobile.dc.html",
+      "title": "Phone",
+      "page": "page-2",
+      "x": 880,
+      "y": 860,
+      "w": 900,
+      "h": 1000
+    },
+    {
+      "file": "Main.dc.html",
+      "title": "Brief",
+      "page": "page-1",
+      "x": 0,
+      "y": 0,
+      "w": 760,
+      "h": 1000
+    },
+    {
+      "file": "Toybox.dc.html",
+      "title": "Option B — Toybox",
+      "page": "page-1",
+      "x": 880,
+      "y": 0,
+      "w": 760,
+      "h": 1000
+    },
+    {
+      "file": "Aurora.dc.html",
+      "title": "Option C — Aurora",
+      "page": "page-1",
+      "x": 1760,
+      "y": 0,
+      "w": 760,
+      "h": 1000
+    },
+    {
+      "file": "Ticker.dc.html",
+      "title": "Option D — Ticker",
+      "page": "page-1",
+      "x": 2640,
+      "y": 0,
+      "w": 760,
+      "h": 1000
+    }
+  ],
+  "annotations": [
+    {
+      "id": "note-a",
+      "page": "page-2",
+      "x": 0,
+      "y": -250,
+      "w": 760,
+      "text": "OPTION A — PAPER ORACLE (chosen)\nWhat changed from the sketch: the answer used to print twice — once in the die, once below. Now the die stamps a short verdict (Yes / Maybe / No) and the slip below carries the full sentence. One reading, plus an at-a-glance result, and short words survive Spanish inside a triangle.\nAlso added: a real resting state, a keyboard hint, and the phone layout with a tap fallback."
+    },
+    {
+      "id": "note-a-states",
+      "page": "page-2",
+      "x": 880,
+      "y": -250,
+      "w": 1180,
+      "text": "The 1.5s pause you already built is now part of the design rather than a delay to sit through — the die turns and the ink settles.\nThe live region is the slip, not the die: screen readers announce the sentence once, not the verdict and then the sentence.\nBuilt and running: the slip's space is reserved while resting so revealing an answer does not shift the button."
+    },
+    {
+      "id": "note-b",
+      "page": "page-1",
+      "x": 880,
+      "y": -230,
+      "w": 760,
+      "text": "B — TOYBOX\nLoud, chunky, sticker-bright. Huge tap targets, most fun to shake; the style dates faster and long Spanish strings strain a bubble sized for English."
+    },
+    {
+      "id": "note-c",
+      "page": "page-1",
+      "x": 1760,
+      "y": -230,
+      "w": 760,
+      "text": "C — AURORA\nThe current dark direction done properly — the orb as light source, the answer surfacing from inside it. The most familiar of the four."
+    },
+    {
+      "id": "note-d",
+      "page": "page-1",
+      "x": 2640,
+      "y": -230,
+      "w": 760,
+      "text": "D — TICKER\nYou type the question and the day's readings stack on a tape. Best reason to come back; the most new scope, and the least magical."
+    }
+  ],
+  "launch": {
+    "view": "canvas",
+    "page": "page-2"
+  }
+}

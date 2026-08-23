@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:wght@400;500;600;700&display=swap">
+  <style>
+    body { margin: 0; }
+    a { color: #16213a; } a:hover { color: #000000; }
+  </style>
+</helmet>
+<div style="width: 1180px; height: 760px; box-sizing: border-box; font-family: Karla, system-ui, sans-serif; color: #1b1a17; background-color: #f7f1e4; background-image: radial-gradient(rgba(27, 26, 23, 0.13) 0.5px, transparent 0.5px); background-size: 6px 6px; padding: 48px 52px; display: flex; flex-direction: column; gap: 40px;">
+
+  <div style="display: flex; flex-direction: column; gap: 8px;">
+    <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #837d6e;">Option A &mdash; the three states</div>
+    <h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 40px; line-height: 1;">The die carries the verdict. The slip carries the words.</h2>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; flex-grow: 1;">
+
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 26px; padding: 32px 24px; border: 1.5px solid #ddd6c6; background: #fbf7ee;">
+      <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #837d6e;">1 &middot; Resting</div>
+      <div style="width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(circle at 34% 27%, #33456d, #101827 60%, #060a12); display: flex; align-items: center; justify-content: center;">
+        <div style="width: 112px; height: 112px; border-radius: 50%; background: radial-gradient(circle at 42% 36%, #1a2740, #070c17); display: flex; align-items: center; justify-content: center;">
+          <div style="width: 92px; height: 80px; background: #f7f1e4; clip-path: polygon(50% 0%, 100% 100%, 0% 100%); display: flex; align-items: flex-end; justify-content: center; padding-bottom: 11px; box-sizing: border-box;">
+            <span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 22px; line-height: 1; color: #16213a;">8</span>
+          </div>
+        </div>
+      </div>
+      <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4a463d; text-align: center;">The die shows the 8. No slip yet &mdash; but its space is held open, so the answer does not shove the button down the page.</p>
+    </div>
+
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 26px; padding: 32px 24px; border: 1.5px solid #ddd6c6; background: #fbf7ee;">
+      <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #837d6e;">2 &middot; Turning</div>
+      <div style="width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(circle at 34% 27%, #33456d, #101827 60%, #060a12); display: flex; align-items: center; justify-content: center; transform: rotate(-5deg);">
+        <div style="width: 112px; height: 112px; border-radius: 50%; background: radial-gradient(circle at 42% 36%, #1a2740, #070c17); display: flex; align-items: center; justify-content: center;">
+          <div style="width: 92px; height: 80px; background: #f7f1e4; clip-path: polygon(50% 0%, 100% 100%, 0% 100%); display: flex; align-items: flex-end; justify-content: center; padding-bottom: 15px; box-sizing: border-box;">
+            <div style="display: flex; gap: 5px;">
+              <span style="width: 5px; height: 5px; border-radius: 50%; background: #16213a;"></span>
+              <span style="width: 5px; height: 5px; border-radius: 50%; background: #16213a; opacity: 0.55;"></span>
+              <span style="width: 5px; height: 5px; border-radius: 50%; background: #16213a; opacity: 0.25;"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4a463d; text-align: center;">Ink settles for 1.5s. Button reads <strong>Asking&hellip;</strong> and is disabled; shake is ignored until it lands.</p>
+    </div>
+
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 26px; padding: 32px 24px; border: 1.5px solid #1b1a17; background: #fbf7ee; box-shadow: 6px 6px 0 rgba(27, 26, 23, 0.14);">
+      <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #a63b2a;">3 &middot; Answered</div>
+      <div style="width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(circle at 34% 27%, #33456d, #101827 60%, #060a12); display: flex; align-items: center; justify-content: center;">
+        <div style="width: 112px; height: 112px; border-radius: 50%; background: radial-gradient(circle at 42% 36%, #1a2740, #070c17); display: flex; align-items: center; justify-content: center;">
+          <div style="width: 92px; height: 80px; background: #f7f1e4; clip-path: polygon(50% 0%, 100% 100%, 0% 100%); display: flex; align-items: flex-end; justify-content: center; padding-bottom: 12px; box-sizing: border-box;">
+            <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #a63b2a;">Maybe</span>
+          </div>
+        </div>
+      </div>
+      <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4a463d; text-align: center;">Die stamps <strong>Yes</strong>, <strong>Maybe</strong> or <strong>No</strong> &mdash; short, so it survives translation. The slip fades up with the full sentence.</p>
+    </div>
+
+  </div>
+
+  <div style="display: flex; gap: 40px; padding-top: 28px; border-top: 1.5px solid #1b1a17;">
+    <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 6px;">
+      <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #837d6e;">Verdict groups</div>
+      <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4a463d;">10 affirmative &rarr; Yes &middot; 5 non-committal &rarr; Maybe &middot; 5 negative &rarr; No. The canonical split, unchanged.</p>
+    </div>
+    <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 6px;">
+      <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #837d6e;">Accessibility</div>
+      <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4a463d;">Slip is the live region, not the die. Focus ring is a 2px ink outline offset 3px. Reduced motion swaps the turn for a fade.</p>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script data-dc-script data-props='{"$preview":{"width":1180,"height":760}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
