@@ -3,19 +3,19 @@
     "title": "Bola Mágica 8",
     "headline": "Pregunta y la bola responde",
     "subtitleDesktop": "Piensa en tu pregunta y luego gira la bola.",
-    "subtitleMobile": "Piensa en tu pregunta y luego agita tu teléfono.",
+    "subtitleMobile": "Piensa en tu pregunta y luego sacude tu teléfono.",
     "askButton": "Consultar la bola",
     "askAgainButton": "Preguntar otra vez",
     "askingButton": "Preguntando…",
     "tapToAskButton": "O toca para preguntar",
-    "shakePrompt": "Dale un buen agitón",
+    "shakePrompt": "Dale una buena sacudida",
     "slipLabel": "La bola dice",
     "keyboardHint": "Pulsa <key>Espacio</key> para consultar la bola.",
     "revealingHint": "La tinta se está asentando…",
     "ballAriaLabel": "Bola Mágica 8",
     "ballDisplay": "8",
     "colophonAnswers": "Veinte respuestas, una bola",
-    "colophonShake": "En el móvil, agitar también funciona"
+    "colophonShake": "En el móvil, sacudir también funciona"
   },
   "verdicts": {
     "YES": "Sí",
