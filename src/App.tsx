@@ -1,8 +1,11 @@
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import { useShake } from './hooks/useShake';
 import { useIsMobile } from './hooks/useIsMobile';
+import { useAskKey } from './hooks/useAskKey';
 import { useRevealAnswer } from './hooks/useRevealAnswer';
 import { LanguageSelector } from './components/LanguageSelector';
+import { Ball } from './components/Ball';
+import { AskAgainIcon, ShakeIcon } from './components/icons';
 import './App.css';
 
 export default function App() {
@@ -11,89 +14,97 @@ export default function App() {
   const { responseKey, status, reveal, isRevealing } = useRevealAnswer();
 
   useShake(reveal, { enabled: isMobile && !isRevealing });
+  useAskKey(reveal, { enabled: !isRevealing });
 
   const isRevealed = status === 'revealed' && responseKey !== null;
 
+  const askLabel = isRevealing
+    ? t('app.askingButton')
+    : isRevealed
+      ? t('app.askAgainButton')
+      : isMobile
+        ? t('app.tapToAskButton')
+        : t('app.askButton');
+
   return (
     <div className="page">
-      <header className="header">
+      <header className="masthead">
+        <div className="wordmark">
+          <span className="wordmark__mark" aria-hidden="true">
+            8
+          </span>
+          <span className="wordmark__text">{t('app.title')}</span>
+        </div>
         <LanguageSelector />
       </header>
 
       <main className="app">
-        <h1>{t('app.title')}</h1>
-        <p className="subtitle">
-          {isMobile ? t('app.subtitleMobile') : t('app.subtitleDesktop')}
-        </p>
-
-        <div
-          className={[
-            'ball',
-            isRevealing ? 'ball--revealing' : '',
-            isRevealed ? 'ball--settled' : '',
-          ]
-            .filter(Boolean)
-            .join(' ')}
-          aria-label={t('app.ballAriaLabel')}
-          aria-busy={isRevealing}
-          role="img"
-        >
-          <span
-            className={[
-              'ball__window',
-              isRevealing ? 'ball__window--revealing' : '',
-              isRevealed ? 'ball__window--revealed' : '',
-            ]
-              .filter(Boolean)
-              .join(' ')}
-          >
-            {isRevealing ? (
-              <span className="ball__thinking" aria-hidden="true">
-                <span className="ball__dot" />
-                <span className="ball__dot" />
-                <span className="ball__dot" />
-              </span>
-            ) : isRevealed ? (
-              <span className="ball__answer">{t(`responses.${responseKey}`)}</span>
-            ) : (
-              t('app.ballDisplay')
-            )}
-          </span>
+        <div className="intro">
+          <h1 className="intro__title">{t('app.headline')}</h1>
+          <p className="intro__lede">
+            {isMobile ? t('app.subtitleMobile') : t('app.subtitleDesktop')}
+          </p>
         </div>
 
-        {isRevealing && (
-          <p className="status status--revealing" aria-live="polite">
-            {t('app.revealingHint')}
-          </p>
-        )}
+        <Ball status={status} responseKey={responseKey} />
 
-        {isRevealed && (
-          <p className="response response--revealed" aria-live="polite">
-            {t(`responses.${responseKey}`)}
-          </p>
-        )}
+        <div className="slip" aria-live="polite">
+          {isRevealing && (
+            <p className="slip__status">{t('app.revealingHint')}</p>
+          )}
 
-        {isMobile ? (
-          <p className="hint hint--mobile">
-            <span className="hint__icon" aria-hidden="true">
-              📱
-            </span>
-            {t('app.shakeHint')}
-          </p>
-        ) : (
-          <>
-            <button
-              type="button"
-              className="ask-button"
-              onClick={reveal}
-              disabled={isRevealing}
-            >
-              {isRevealing ? t('app.askingButton') : t('app.askButton')}
-            </button>
-            <p className="hint">{t('app.desktopHint')}</p>
-          </>
-        )}
+          {isRevealed && (
+            <>
+              <div className="slip__rule">
+                <span className="slip__label">{t('app.slipLabel')}</span>
+              </div>
+              <p className="slip__answer">{t(`responses.${responseKey}`)}</p>
+            </>
+          )}
+        </div>
+
+        <div className="actions">
+          {isMobile ? (
+            <>
+              <p className="hint hint--shake">
+                <ShakeIcon />
+                {t('app.shakePrompt')}
+              </p>
+              <button
+                type="button"
+                className="ask-button ask-button--secondary"
+                onClick={reveal}
+                disabled={isRevealing}
+              >
+                {askLabel}
+              </button>
+            </>
+          ) : (
+            <>
+              <button
+                type="button"
+                className="ask-button"
+                onClick={reveal}
+                disabled={isRevealing}
+              >
+                <AskAgainIcon className="ask-button__icon" />
+                {askLabel}
+              </button>
+              <p className="hint">
+                <Trans
+                  i18nKey="app.keyboardHint"
+                  components={{ key: <kbd className="key" /> }}
+                />
+              </p>
+            </>
+          )}
+        </div>
       </main>
+
+      <footer className="colophon">
+        <span>{t('app.colophonAnswers')}</span>
+        <span>{t('app.colophonShake')}</span>
+      </footer>
     </div>
   );
 }

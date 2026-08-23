@@ -1,20 +1,33 @@
 {
   "app": {
     "title": "Bola Mágica 8",
-    "subtitleDesktop": "Piensa en tu pregunta y luego consulta la bola.",
+    "headline": "Pregunta y la bola responde",
+    "subtitleDesktop": "Piensa en tu pregunta y luego gira la bola.",
     "subtitleMobile": "Piensa en tu pregunta y luego agita tu teléfono.",
-    "askButton": "Preguntar a la bola 8",
-    "shakeHint": "Agita tu dispositivo para revelar la respuesta.",
-    "desktopHint": "Presiona el botón cuando estés listo.",
+    "askButton": "Consultar la bola",
+    "askAgainButton": "Preguntar otra vez",
+    "askingButton": "Preguntando…",
+    "tapToAskButton": "O toca para preguntar",
+    "shakePrompt": "Dale un buen agitón",
+    "slipLabel": "La bola dice",
+    "keyboardHint": "Pulsa <key>Espacio</key> para consultar la bola.",
+    "revealingHint": "La tinta se está asentando…",
     "ballAriaLabel": "Bola Mágica 8",
     "ballDisplay": "8",
-    "revealingHint": "Consultando los espíritus…",
-    "askingButton": "Preguntando…"
+    "colophonAnswers": "Veinte respuestas, una bola",
+    "colophonShake": "En el móvil, agitar también funciona"
+  },
+  "verdicts": {
+    "YES": "Sí",
+    "MAYBE": "Quizá",
+    "NO": "No"
   },
   "language": {
     "label": "Idioma",
     "en": "English",
-    "es": "Español"
+    "es": "Español",
+    "enShort": "EN",
+    "esShort": "ES"
   },
   "responses": {
     "IT_IS_CERTAIN": "Es seguro.",
