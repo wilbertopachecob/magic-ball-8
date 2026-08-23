@@ -13,7 +13,7 @@ export default function App() {
   const isMobile = useIsMobile();
   const { responseKey, status, reveal, isRevealing } = useRevealAnswer();
 
-  useShake(reveal, { enabled: isMobile && !isRevealing });
+  useShake(reveal, { enabled: isMobile, paused: isRevealing });
   useAskKey(reveal, { enabled: !isRevealing });
 
   const isRevealed = status === 'revealed' && responseKey !== null;
