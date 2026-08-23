@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import {
   getRandomMagic8BallResponseKey,
   type Magic8BallResponseKey,
-} from '../magic8ball';
+} from '../magic8ball.constants';
 import { REVEAL_DELAY_MS } from '../constants';
 
 export type RevealStatus = 'idle' | 'revealing' | 'revealed';

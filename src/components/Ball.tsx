@@ -2,8 +2,8 @@ import { useTranslation } from 'react-i18next';
 import {
   getVerdictForResponseKey,
   type Magic8BallResponseKey,
-} from '../magic8ball';
-import type { RevealStatus } from '../hooks/useRevealAnswer';
+} from '@/magic8ball.constants';
+import type { RevealStatus } from '@/hooks/useRevealAnswer';
 
 type BallProps = {
   status: RevealStatus;
