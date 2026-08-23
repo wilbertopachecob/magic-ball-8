@@ -84,4 +84,65 @@ describe('useShake', () => {
 
     expect(window.addEventListener).not.toHaveBeenCalled();
   });
+
+  it('does not call onShake while paused', () => {
+    const onShake = vi.fn();
+
+    renderHook(() => useShake(onShake, { threshold: 10, paused: true }));
+
+    dispatchMotion({ x: 0, y: 0, z: 0 });
+    dispatchMotion({ x: 10, y: 10, z: 10 });
+
+    expect(onShake).not.toHaveBeenCalled();
+  });
+
+  it('does not false-trigger after pause ends', () => {
+    vi.useFakeTimers();
+    const onShake = vi.fn();
+
+    const { rerender } = renderHook(
+      ({ paused }) => useShake(onShake, { threshold: 10, cooldownMs: 0, paused }),
+      { initialProps: { paused: false } },
+    );
+
+    dispatchMotion({ x: 0, y: 0, z: 0 });
+    dispatchMotion({ x: 10, y: 10, z: 10 });
+    expect(onShake).toHaveBeenCalledTimes(1);
+
+    rerender({ paused: true });
+    dispatchMotion({ x: 20, y: 20, z: 20 });
+    dispatchMotion({ x: 30, y: 30, z: 30 });
+
+    rerender({ paused: false });
+    dispatchMotion({ x: 31, y: 31, z: 31 });
+
+    expect(onShake).toHaveBeenCalledTimes(1);
+
+    act(() => {
+      vi.advanceTimersByTime(1);
+    });
+
+    dispatchMotion({ x: 0, y: 0, z: 0 });
+    dispatchMotion({ x: 10, y: 10, z: 10 });
+
+    expect(onShake).toHaveBeenCalledTimes(2);
+
+    vi.useRealTimers();
+  });
+
+  it('keeps the listener attached while paused', () => {
+    const onShake = vi.fn();
+
+    const { rerender } = renderHook(
+      ({ paused }) => useShake(onShake, { paused }),
+      { initialProps: { paused: false } },
+    );
+
+    expect(window.addEventListener).toHaveBeenCalledTimes(1);
+
+    rerender({ paused: true });
+
+    expect(window.removeEventListener).not.toHaveBeenCalled();
+    expect(window.addEventListener).toHaveBeenCalledTimes(1);
+  });
 });

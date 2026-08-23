@@ -7,6 +7,8 @@ export type UseShakeOptions = {
   threshold?: number;
   cooldownMs?: number;
   enabled?: boolean;
+  /** When true, motion is tracked but shake detection is suppressed. */
+  paused?: boolean;
 };
 
 type Acceleration = {
@@ -24,20 +26,28 @@ export function useShake(
     threshold = DEFAULT_THRESHOLD,
     cooldownMs = DEFAULT_COOLDOWN_MS,
     enabled = true,
+    paused = false,
   } = options;
 
   const lastShakeAt = useRef(0);
   const lastAcceleration = useRef<Acceleration>({ x: 0, y: 0, z: 0 });
   const onShakeRef = useRef(onShake);
+  const pausedRef = useRef(paused);
 
   useEffect(() => {
     onShakeRef.current = onShake;
   }, [onShake]);
 
   useEffect(() => {
+    pausedRef.current = paused;
+  }, [paused]);
+
+  useEffect(() => {
     if (!enabled || typeof window === 'undefined') {
       return undefined;
     }
+
+    let isCalibrated = false;
 
     const handleMotion = (event: DeviceMotionEvent) => {
       const acceleration = event.accelerationIncludingGravity;
@@ -48,12 +58,23 @@ export function useShake(
       const x = acceleration.x ?? 0;
       const y = acceleration.y ?? 0;
       const z = acceleration.z ?? 0;
+
+      if (!isCalibrated) {
+        lastAcceleration.current = { x, y, z };
+        isCalibrated = true;
+        return;
+      }
+
       const deltaX = Math.abs(x - lastAcceleration.current.x);
       const deltaY = Math.abs(y - lastAcceleration.current.y);
       const deltaZ = Math.abs(z - lastAcceleration.current.z);
       const delta = deltaX + deltaY + deltaZ;
 
       lastAcceleration.current = { x, y, z };
+
+      if (pausedRef.current) {
+        return;
+      }
 
       const now = Date.now();
       if (delta > threshold && now - lastShakeAt.current > cooldownMs) {

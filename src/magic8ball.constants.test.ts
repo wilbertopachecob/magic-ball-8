@@ -4,7 +4,7 @@ import {
   MAGIC_8_BALL_VERDICTS,
   getRandomMagic8BallResponseKey,
   getVerdictForResponseKey,
-} from './magic8ball';
+} from './magic8ball.constants';
 
 describe('getRandomMagic8BallResponseKey', () => {
   it('returns one of the known response keys', () => {
