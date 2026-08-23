@@ -1,0 +1,41 @@
+{
+  "app": {
+    "title": "Bola Mágica 8",
+    "subtitleDesktop": "Piensa en tu pregunta y luego consulta la bola.",
+    "subtitleMobile": "Piensa en tu pregunta y luego agita tu teléfono.",
+    "askButton": "Preguntar a la bola 8",
+    "shakeHint": "Agita tu dispositivo para revelar la respuesta.",
+    "desktopHint": "Presiona el botón cuando estés listo.",
+    "ballAriaLabel": "Bola Mágica 8",
+    "ballDisplay": "8",
+    "revealingHint": "Consultando los espíritus…",
+    "askingButton": "Preguntando…"
+  },
+  "language": {
+    "label": "Idioma",
+    "en": "English",
+    "es": "Español"
+  },
+  "responses": {
+    "IT_IS_CERTAIN": "Es seguro.",
+    "IT_IS_DECIDEDLY_SO": "Decididamente sí.",
+    "WITHOUT_A_DOUBT": "Sin duda.",
+    "YES_DEFINITELY": "Sí, definitivamente.",
+    "YOU_MAY_RELY_ON_IT": "Puedes confiar en ello.",
+    "AS_I_SEE_IT_YES": "Según lo veo, sí.",
+    "MOST_LIKELY": "Lo más probable.",
+    "OUTLOOK_GOOD": "Buen pronóstico.",
+    "YES": "Sí.",
+    "SIGNS_POINT_TO_YES": "Las señales apuntan a que sí.",
+    "REPLY_HAZY_TRY_AGAIN": "Respuesta confusa, intenta de nuevo.",
+    "ASK_AGAIN_LATER": "Pregunta de nuevo más tarde.",
+    "BETTER_NOT_TELL_YOU_NOW": "Mejor no decírtelo ahora.",
+    "CANNOT_PREDICT_NOW": "No puedo predecirlo ahora.",
+    "CONCENTRATE_AND_ASK_AGAIN": "Concéntrate y pregunta de nuevo.",
+    "DONT_COUNT_ON_IT": "No cuentes con ello.",
+    "MY_REPLY_IS_NO": "Mi respuesta es no.",
+    "MY_SOURCES_SAY_NO": "Mis fuentes dicen que no.",
+    "OUTLOOK_NOT_SO_GOOD": "El pronóstico no es bueno.",
+    "VERY_DOUBTFUL": "Muy dudoso."
+  }
+}

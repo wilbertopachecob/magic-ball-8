@@ -1,0 +1,41 @@
+{
+  "app": {
+    "title": "Magic 8 Ball",
+    "subtitleDesktop": "Think of your question, then ask the ball.",
+    "subtitleMobile": "Think of your question, then shake your phone.",
+    "askButton": "Ask the 8 Ball",
+    "shakeHint": "Shake your device to reveal your answer.",
+    "desktopHint": "Press the button below when you are ready.",
+    "ballAriaLabel": "Magic 8 Ball",
+    "ballDisplay": "8",
+    "revealingHint": "Consulting the spirits…",
+    "askingButton": "Asking…"
+  },
+  "language": {
+    "label": "Language",
+    "en": "English",
+    "es": "Español"
+  },
+  "responses": {
+    "IT_IS_CERTAIN": "It is certain.",
+    "IT_IS_DECIDEDLY_SO": "It is decidedly so.",
+    "WITHOUT_A_DOUBT": "Without a doubt.",
+    "YES_DEFINITELY": "Yes definitely.",
+    "YOU_MAY_RELY_ON_IT": "You may rely on it.",
+    "AS_I_SEE_IT_YES": "As I see it, yes.",
+    "MOST_LIKELY": "Most likely.",
+    "OUTLOOK_GOOD": "Outlook good.",
+    "YES": "Yes.",
+    "SIGNS_POINT_TO_YES": "Signs point to yes.",
+    "REPLY_HAZY_TRY_AGAIN": "Reply hazy, try again.",
+    "ASK_AGAIN_LATER": "Ask again later.",
+    "BETTER_NOT_TELL_YOU_NOW": "Better not tell you now.",
+    "CANNOT_PREDICT_NOW": "Cannot predict now.",
+    "CONCENTRATE_AND_ASK_AGAIN": "Concentrate and ask again.",
+    "DONT_COUNT_ON_IT": "Don't count on it.",
+    "MY_REPLY_IS_NO": "My reply is no.",
+    "MY_SOURCES_SAY_NO": "My sources say no.",
+    "OUTLOOK_NOT_SO_GOOD": "Outlook not so good.",
+    "VERY_DOUBTFUL": "Very doubtful."
+  }
+}

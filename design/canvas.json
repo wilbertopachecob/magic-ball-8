@@ -1,0 +1,17 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "title": "Brief", "x": 0, "y": 0, "w": 760, "h": 1000 },
+    { "file": "PaperOracle.dc.html", "title": "Option A — Paper Oracle", "x": 880, "y": 0, "w": 760, "h": 1000 },
+    { "file": "Toybox.dc.html", "title": "Option B — Toybox", "x": 1760, "y": 0, "w": 760, "h": 1000 },
+    { "file": "Aurora.dc.html", "title": "Option C — Aurora", "x": 2640, "y": 0, "w": 760, "h": 1000 },
+    { "file": "Ticker.dc.html", "title": "Option D — Ticker", "x": 3520, "y": 0, "w": 760, "h": 1000 }
+  ],
+  "annotations": [
+    { "id": "note-brief", "x": 0, "y": -230, "w": 760, "text": "Pick a direction, not a pixel.\nEach board shows the same moment — the answer has just landed — in a different voice. Tell me which one to take further and I'll build out the full set of states (idle, asking, revealed, error) plus the phone layout." },
+    { "id": "note-a", "x": 880, "y": -230, "w": 760, "text": "A — PAPER ORACLE\nWhy: the ritual reads as something printed and permanent. Cream paper, ink circle, a real serif. Calm, unmistakably not another neon app, and effortlessly high-contrast for accessibility.\nTradeoff: quiet. Less \"toy\" than the object actually is — kids and casual users may find it stiff." },
+    { "id": "note-b", "x": 1760, "y": -230, "w": 760, "text": "B — TOYBOX\nWhy: leans all the way into the toy. Thick outlines, hard shadows, a speech bubble that shouts the answer. Huge tap targets by default, and the most fun to shake.\nTradeoff: loud. The style dates faster, and Spanish strings run long inside a bubble sized for English." },
+    { "id": "note-c", "x": 2640, "y": -230, "w": 760, "text": "C — AURORA\nWhy: closest to what you have now, but properly made — the orb becomes a light source, the answer surfaces from inside it, and the pause before it lands is the whole experience.\nTradeoff: the most familiar of the four. Dark-only means the glow has to carry it; needs a reduced-motion path from day one." },
+    { "id": "note-d", "x": 3520, "y": -230, "w": 760, "text": "D — TICKER\nWhy: the different one. You type the question, so the answer sticks to something, and the tape keeps the day's readings. Turns a one-shot gag into something you come back to.\nTradeoff: new scope — an input, local storage, a clear-history control, plus a yes/no/maybe grouping of the 20 answers. Also the least magical: it reads like a tool." }
+  ],
+  "launch": { "view": "canvas" }
+}
